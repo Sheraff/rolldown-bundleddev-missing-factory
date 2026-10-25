@@ -1,5 +1,7 @@
 # Rolldown bundled dev: HMR patch `import()` of a never-loaded chunk throws `MissingFactoryError`
 
+Issue: https://github.com/rolldown/rolldown/issues/11300
+
 Vite `experimental.bundledDev` with `devMode.lazy: false`. `src/loader.js` holds `() => import('./lazy.js')` and
 self-accepts. `repro.mjs` opens the page, edits `src/loader.js`, then calls the hot-updated module's loader.
 
